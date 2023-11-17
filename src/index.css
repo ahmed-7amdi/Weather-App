@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&family=Poppins:wght@500&display=swap');
+
+/* Start Global Rules */
+* {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+}
+
+a {
+   text-decoration: none;
+}
+
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+   .container {
+      width: 750px;
+   }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+   .container {
+      width: 970px;
+   }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+   .container {
+      width: 1170px;
+   }
+}
+
+/* End Global Rules */
+body {
+   min-height: 100vh;
+   background-image: url('./assets/white-cloud-blue-sky.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+.loading {
+   height: 100vh;
+   max-height: 100vh;
+   background: #D9EDF1;
+   display: grid;
+   place-items: center;
+   font-size: 55px;
+}
+
+.weather {
+   min-height: calc(100vh - 70px);
+   width: 100%;
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
+.weather .container {
+   padding: 50px 0;
+}
+
+.container .input {
+   padding: 0 15px;
+   width: 100%;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   position: relative;
+   margin-bottom: 50px;
+}
+
+.container .input .input-container {
+   display: flex;
+   justify-content: center;
+   width: 100%;
+   height: 100%;
+}
+
+.container .input .input-container .list-container {
+   position: relative;
+   width: 100%;
+}
+
+.container .input .input-container ul {
+   border-radius: 7px;
+   position: absolute;
+   width: 100%;
+   padding: 20px 0;
+   left: 0px;
+   top: 45px;
+   background-color: white;
+
+}
+
+.container .input .input-container ul li {
+   cursor: pointer;
+   padding: 5px 15px;
+   color: black;
+}
+
+.container .input .input-container ul li:hover {
+   background-color: black;
+   color: white;
+}
+
+.container .input input {
+   width: 100%;
+   height: 40px;
+   border: 1px solid rgba(0, 0, 0, 0.5);
+   outline: none;
+   text-align: center;
+   border-radius: 22px;
+   font-size: 17px;
+}
+
+.container .input .select {
+   position: relative;
+}
+
+.container .input .select .icon {
+   position: absolute;
+   color: black;
+   right: 6px;
+   top: 50%;
+   transform: translateY(-50%);
+}
+
+.container .input select {
+   padding: 10px;
+   outline: none;
+   border: 1px solid rgba(255, 0, 0, 0.5);
+   border-radius: 22px;
+}
+
+.container .input button {
+   padding: 11px 12px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   background-color: white;
+   margin-left: 10px;
+   outline: none;
+   border: 1px solid rgba(88, 88, 219, 0.6);
+   transition: 0.3s;
+}
+
+.container .input button:hover {
+   background-color: antiquewhite;
+}
+
+.container .main {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   /* justify-content: space-evenly; */
+   /* background-color: aquamarine; */
+}
+
+.first {
+   display: flex;
+   align-items: center;
+   width: 60%;
+}
+
+
+.container .main .left {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   /* background-color: beige; */
+}
+
+.deg {
+   background-color: transparent !important;
+   display: inline;
+   font-size: 10px;
+}
+
+.container .main .left img {
+   width: 140px;
+   margin: 15px;
+}
+
+.container .main .left .box h2 {
+   margin-bottom: 10px;
+   line-height: 1.75rem;
+   text-transform: capitalize;
+   color: #092138;
+}
+
+.container .main .left .box h4 {
+   font-size: 0.85rem;
+   font-weight: 400;
+   color: #636C71;
+}
+
+.container .main .centre {
+   padding: 15px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container .main .centre h2 {
+   color: #263D51;
+}
+
+.container .main .centre h2 span {
+   font-size: 4rem;
+   color: #092138;
+   font-weight: 300;
+   font-family: 'Noto Sans', sans-serif;
+}
+
+.container .main .right {
+   width: 60%;
+   height: 100%;
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   flex-wrap: wrap;
+   color: #596266;
+   font-size: 0.85rem;
+   font-family: 'Noto Sans', sans-serif;
+}
+
+.container .main .right span {
+   width: 2px;
+   height: 50%;
+   background-color: #092138;
+}
+
+.container .main .right .one {
+   width: calc(100% / 3);
+   height: 100%;
+   padding: 0 15px;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.container .main .right .two {
+   width: calc(100% / 3);
+   height: 100%;
+   padding: 0 15px;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.container .main .right .three {
+   width: calc(100% / 3);
+   height: 100%;
+   padding: 0 15px;
+   display: flex;
+   align-items: flex-start;
+   justify-content: center;
+   flex-direction: column;
+}
+
+.container .forecast {
+   margin-top: 20px;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   overflow-x: scroll;
+}
+
+.container .forecast::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+   appearance: none;
+}
+
+.container .forecast .card {
+   width: 25%;
+   height: 120px;
+   margin: 0 25px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-direction: column;
+}
+
+.container .forecast .card h4 {
+   font-weight: 500;
+   color: #092138;
+}
+
+.container .forecast .card span {
+   font-weight: 300;
+   font-size: 0.65rem;
+   color: #748896;
+}
+
+.container .forecast .card img {
+   width: 58px;
+   height: 58px;
+}
+
+.container .forecast .card p {
+   font-weight: 200;
+   color: #748896;
+}
+
+.data.container {
+   display: flex;
+   gap: 30px;
+   flex-direction: column;
+   margin-top: 25px;
+   margin-bottom: 45px;
+   padding: 50px 20px;
+   width: 90%;
+   border-radius: 22px;
+   background-color: white;
+   color: black;
+   text-align: center;
+   font-size: 25px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bolder;
+   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+.head {
+   font-size: 30px;
+}
+
+.developer {
+   background-color: black;
+   height: 70px;
+   color: white;
+   display: grid;
+   place-items: center;
+   width: 100%;
+}
+
+
+@media (max-width:991px) {
+   .container .input input {
+      width: 400px;
+   }
+
+   .first {
+      width: 80%;
+      gap: 15%;
+   }
+
+   .container .main .right {
+      width: 100%;
+      padding: 15px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      color: #596266;
+      font-size: 0.85rem;
+      font-family: 'Noto Sans', sans-serif;
+   }
+
+   .container .forecast {
+      overflow-x: scroll;
+   }
+
+   .container .main {
+      flex-direction: column;
+   }
+}
+
+
+@media (max-width:767px) {
+   .first {
+      flex-direction: column;
+      width: 80%;
+   }
+
+   .container .main .left {
+      width: 100%;
+      gap: 20px;
+      justify-content: space-evenly;
+   }
+
+   .container .main .left .box {
+      width: 100%;
+   }
+
+
+   .container .input {
+      flex-direction: column;
+   }
+
+   .container .input .input-container {
+      width: 100%;
+   }
+
+   .container .input input {
+      width: 260px;
+   }
+
+   .container .input select {
+      width: 100%;
+   }
+
+   .container .main .right {
+      width: 100%;
+      padding: 15px 0;
+      gap: 0;
+      display: flex;
+      flex-direction: column;
+      color: #596266;
+      font-size: 0.85rem;
+   }
+
+   .container .main .right .one {
+      width: 100%;
+      padding: 7px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+
+   .container .main .right .two {
+      width: 100%;
+      padding: 7px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+
+   .container .main .right .three {
+      width: 100%;
+      padding: 7px 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+   }
+
+   .data {
+      font-size: 16px;
+   }
+}
+
+/* Mic */
+.address {
+   position: relative;
+}
+
+.mic {
+   width: 40px;
+   height: 40px;
+   position: relative;
+   color: black;
+   padding: 11px;
+   cursor: pointer;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   background-color: white;
+   margin-left: 10px;
+   border: 1px solid rgba(128, 128, 128, 0.6);
+}
+
+.mic .toggle {
+   min-width: 40px;
+   min-height: 40px;
+   display: grid;
+   place-items: center;
+}
+
+.mic:hover {
+   background-color: antiquewhite;
+}
+
+.mic .mic-span {
+   position: absolute;
+   bottom: -30px;
+   font-size: 11px;
+   font-weight: bold;
+   color: white;
+   background-color: #0f0f0f;
+   border-radius: 5px;
+   width: 155px;
+   padding: 3px 5px;
+   transition: 0.3s;
+}
+
+.show-tool-tip {
+   opacity: 0;
+}
+
+.day_high {
+   background-image: url('./assets/26999291_7280738.jpg');
+}
+
+.day_normal {
+   background-image: url('./assets/white-cloud-blue-sky.jpg');
+}
+
+.day_low {
+   background-image: url('./assets/3d-winter-landscape-with-snowy-tree.jpg');
+}
+
+.night {
+   background-image: url('./assets/beautiful-night-sky-with-shiny-stars.jpg');
+   color: white;
+}
+
+.white {
+   color: white !important;
+}
